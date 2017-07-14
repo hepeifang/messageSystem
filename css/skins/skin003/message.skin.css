@@ -1,0 +1,126 @@
+/*全局*/
+._MESSAGE_ *,._MESSAGE-CHAT_ * {font-family:"Microsoft YaHei"}
+
+._MSKIN-BAR_ {background:url('images/skin-bar.gif') repeat-x;}
+._MICON-TALK_ {background:url("images/icon-talk.png") no-repeat 0px 0px;}
+._MICON-TALK-TINY_ {background:url("images/icon-talk.png") no-repeat -6px -36px;width:18px;height:18px;}
+
+._MBTN-WINDOW_ li {background:url("images/skin-window.png") no-repeat;cursor:pointer;}
+._MBTN-WINDOW_ ._MBTN-WNARROW_ {background-position:0px 0px;}
+._MBTN-WNARROW_:hover {background-position:-27px 0px;}
+._MBTN-WINDOW_ ._MBTN-WCLOSE_ {background-position:0px -30px;border-top-right-radius: 5px;}
+._MBTN-WCLOSE_:hover {background-position:-27px -30px;}
+
+._MBTN-DIALOG_ button {background:none;background:url("images/skin-buttons.png") no-repeat;cursor:pointer;border:0px;height:30px;}
+._MBTN-DIALOG_ ._MBTN-ICON-BUTTON_ {width:54px;background-position:-4px 0px;color:#FFF;}
+._MBTN-DIALOG_ ._MBTN-ICON-CANCEL_ {width:54px;background-position:-4px -30px;color:#0D0D0D;}
+._MBTN-DIALOG_ ._MBTN-ICON-GRAY_ {width:66px;background-position:-4px -60px;color:#575757;font-size:12px;}
+
+._MBTN-TOOLS_ button {background:none;cursor:pointer;border:0px;font-size:12px;background:url("images/skin-tools.png") no-repeat;width:30px;height:30px;}
+._MBTN-TOOLS_ ._MBTN-ICON-IMAGE_ {background-position:0px 0px;}
+._MBTN-TOOLS_ ._MBTN-ICON-IMAGE-GREY_ {background-position:-30px 0px;}
+._MBTN-TOOLS_ ._MBTN-ICON-USER_ {background-position:0px -30px;}
+._MBTN-TOOLS_ ._MBTN-ICON-FACE_ {background-position:0px -60px;}
+._MBTN-TOOLS_ ._MBTN-ICON-ANNEX_ {background-position:0px -90px;} 
+._MBTN-TOOLS_ ._MBTN-ICON-ANNEX-GREY_ {background-position:-30px -90px;}
+
+/*布局设置*/
+._MESSAGE_,._MESSAGE-CHAT_ {border:1px solid #919191;border-radius: 5px 5px 0px 0px;box-shadow: 0px 4px 10px gray;}
+
+._MP-TITLE_ {color:#FEFEFF;border-bottom:1px solid #919191;border-radius:5px 5px 0px 0px;cursor: pointer;}
+._MP-SEARCH-BUTTON_ {width:16px;height:20px;background:url("images/skin-search.png") no-repeat center;cursor:pointer;}
+._MP-TALK_ {text-indent:24px;color:#666666;font-size:12px;line-height:20px;background:url("images/skin-talk.png") no-repeat left center;cursor:pointer;}
+
+._MP-FUNC_ li {background:url("images/skin-func.png") no-repeat center;cursor:pointer;}
+/*#FUNC#*/
+._MP-FUNC_ li._SELECTED_,._MP-FUNC_ li:hover {background-color:#7DC9BB;}
+._MP-FUNC_ ._MPF-LATEST_ {background-position:center 0px;}
+._MP-FUNC_ ._MPF-FRIEND_ {background-position:center -30px;}
+._MP-FUNC_ ._MPF-TALK_ {background-position:center -60px;}
+
+/*#USER#*/
+._MPL-LIST-ITEM_:hover,._MPL-LIST-ITEM_._SELECTED_ {background-color:#D2F6F0;} 
+._MPL-LIST-ITEM_ ._MPL-ICON_ em {background-color:#EE6817;}
+
+._MPL-EDIT_ {background:url("images/icon-edit.png") no-repeat center center;}
+._MPL-TREE-TITLE_ {text-indent:20px;background:url("images/skin-arrow.png") no-repeat 0px 0px;}
+._MPL-TREE-TITLE_._SELECTED_ {background-position:0px -16px;}
+
+._MT-MESSAGE_ {color:#FEFEFF;font-weight:bold;}
+
+._MESSAGE-TRAY_ {border-top:1px solid #919191;}
+._MT-STATE_ {background:url("images/skin-state.png") no-repeat 0px -30px;}
+._MT-STATE_._OFFLINE_ {background-position:-30px -30px;}
+._MT-STATE_._ONLINE_ {background-position: 0px -30px;}
+
+._MT-MESSAGE_ {text-indent:10px;background:url("images/skin-line.png") no-repeat ;}
+
+._MT-SKIN_ {background:url("images/skin-window.png") no-repeat 0px -60px;cursor:pointer;}
+._MT-SKIN_:hover {background-position:-27px -60px;}
+
+/*Message Chat*/
+._MESSAGE-CHAT_ {border-radius:5px;}
+._MC-TITLE_ {color:#FEFEFF;border-radius:5px 5px 0px 0px;}
+._MC-TAB_ li {border-radius:3px 3px 0px 0px;cursor:pointer;}
+/*#CHAT-TITLE#*/
+._MC-TAB_ li:hover,._MC-TAB_ li._SELECTED_  {background-color:#BBE3DC;}
+._MC-TAB-CLOSE_ {background:url("images/icon-close.png") no-repeat center center;display:none;}
+._MC-TAB_ li:hover ._MC-TAB-CLOSE_ {display:block;} 
+._MC-TAB_ li._SELECTED_ ._MC-TAB-CLOSE_ {display:block;}
+._MC-TAB-TIP_ {background-color:white;border-radius:12px;color:#EE6817;border:1px solid #EE6817;}
+
+._MINFO-RECORD-TIP_ {background-color:#EE6817;border-radius:12px;color:white;}
+
+._MCPL-MESSAGE_ p {border:1px solid #D3D3D3;border-radius: 6px;}
+._MCPL-MESSAGE_ ._MCPL-ARROW_ {position:absolute;background:url("images/bubble-arrow.png") no-repeat 0px 0px;width:14px;height:14px;bottom:26px;left:6px;}
+/*#CHAT#*/
+._MBUBBLE-RIGHT_ ._MCPL-MESSAGE_ p {border-color:#A6E3D9;background-color:#D2F6F0;}
+._MBUBBLE-RIGHT_ ._MCPL-MESSAGE_ ._MCPL-ARROW_ {background-position:-14px 0px;right:6px;left:auto;}
+
+._MCPL-SEND_,._MCPL-TOOLS_ {background:url("images/skin-chatline.png") repeat-y;}
+._MCPL-TOOLS_ ._MBTN-DIALOG_ {position:absolute;right:6px;top:0px;}
+._MCPL-TOOLS_ ._MBTN-DIALOG_ li {margin:0px 2px;}
+._MCPL-TOOLS_ ._MBTN-TOOLS_ li {margin:0px 4px;}
+
+._MCPL-SEND_ {border-radius:0px 0px 5px 5px;} 
+._MCPL-SEND_ ._MBTN-DIALOG_ {position:absolute;right:6px;top:2.5px;}
+._MCPL-SEND_ h3 {}
+._MCPL-SEND_ h3._OVERFLOW_ {color:#DA4343;}
+
+._MCP-LAYER-INFO_ {height:500px;border:1px solid #C4C4C4; border-radius:3px;margin-right:5px;margin-top:3px;}
+._MINFO-TITLE_ {background-color:#F5F5F5;}
+._MINFO-LIST-ITEM_ ._MINFO-NAME_ {color:#393939;}
+._MINFO-MESSAGE_ {height:445px;}
+/*#CHAT-RECORD#*/
+._MINFO-MESSAGE-ITEM_:hover {background-color:#D2F6F0;}
+
+._MINFO-MESSAGE-SEARCH_ {background-color:#F5F5F5;}
+._MINFO-MESSAGE-SEARCH_ ._MINFO-MSEARCH-LEFT_ {background:url("images/skin-sarrow.png") no-repeat 0px -24px;}
+._MINFO-MESSAGE-SEARCH_ ._MINFO-MSEARCH-RIGHT_{background:url("images/skin-sarrow.png") no-repeat 0px 0px;}
+
+._MBTN-FACES-LAYER_ {background-color:#FAFBFC;border:1px solid #A2ACB7;}
+
+/*讨论组构建*/
+._MESSAGE-TALKGROUP_ {border-radius:5px;border:1px solid #A2ACB7;}
+._MTG-TITLE_ {position:relative;color:#FEFEFF;border-radius:5px 5px 0px 0px;text-indent:20px;}
+._MTG-TITLE_  ._MBTN-WINDOW_ {width:27px;}
+
+._MTG-PANEL_ {background-color:#FAFBFC;}
+._MTG-CONTROL_ {background:url("images/skin-chatline.png") repeat-y;border-radius:0px 0px 5px 5px;}
+._MTG-TREE_,._MTG-POOL_ {background-color:#F3F6F9;}
+
+._MTG-TREE-TITLE_ {position:relative;text-indent:20px;background:url("images/skin-arrow.png") no-repeat 0px 4px;}
+
+/*#TALK#*/
+._MTG-TREE-TITLE_:hover,._MTG-TREE-TITLE_._SELECTED_ {background-color:#D2F6F0;background-position:0px -11px;}
+._MTG-LIST-ITEM_:hover,._MTG-LIST-ITEM_._SELECTED_ {background-color:#D2F6F0;} 
+
+._MTG-LIST-ITEM_ ._MTG-ICON_ em {background-color:#EE6817;}
+._MTG-REMOVE_ {background:url("images/skin-talkgroup.png") no-repeat 0px -30px;height:30px;} 
+._MTG-ADD_ {background:url("images/skin-talkgroup.png") no-repeat 0px 0px;height:30px;}
+
+._MTG-CONTROL_ ._MBTN-DIALOG_ {position:absolute;right:6px;top:0px;}
+._MTG-CONTROL_ ._MBTN-DIALOG_ li {margin:0px 2px;}
+
+/*图片预览*/
+._MPREVIEW-CLOSE_ {background:url("images/skin-close.png") no-repeat center center;}

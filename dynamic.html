@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Message System</title>
+	</head>
+	<body>
+		<button id="state">用户状态</button>
+		<button id="close">关闭</button>
+		<button id="open">打开</button>
+		<button id="reload">重载</button>
+		<input type="text" id="userId"/><button id="logout">模拟注销</button>
+		<button id="clear">清空</button>
+		<ul id="msg">
+			
+		</ul>
+		<!-- 讨论组添加对话框  end -->
+		<script src="js/jbud.js" data-config="./js/config.js" data-main="./message/index" data-cache="true" data-params="callback=doListener&init=false">
+		</script>
+		<script >
+			var msg = jBud("#msg");
+			var Message;
+			
+			jBud("#state").on("click",function(){
+				if(!Message) {
+					doPrepend("消息系统还未构建。");
+				} else {
+					doPrepend("用户状态："+(Message.isOnline()?"上线":"下线"));
+				}
+			});
+			
+			jBud("#open").on("click",function(){
+				if(!Message) {
+					doPrepend("消息系统还未构建。");
+				} else {
+					doPrepend("打开面板");
+					Message.open();
+				}
+			});
+			
+			jBud("#close").on("click",function(){
+				if(!Message) {
+					doPrepend("消息系统还未构建。");
+				} else {
+					doPrepend("关闭面板");
+					Message.close();
+				}
+			});
+			
+			jBud("#reload").on("click",function(){
+				if(!Message) {
+					doPrepend("消息系统还未构建。");
+				} else {
+					doPrepend("用户重载");
+					Message.reload();
+				}
+			});
+			
+			jBud("#logout").on("click",function(){
+				var id = jBud.trim(jBud("#userId").val());
+				jBud.jsonp('http://chat.xuan.news.cn/api/kickYou.do',{uid:id});
+			});
+			
+			jBud("#clear").on("click",function(){
+				msg.empty();
+			});
+			
+			var doListener = function(message) {
+				Message = message;
+				message.addStateListener(function(data) {
+					var text;
+					if(data.code == 200) {
+						jBud("#userId").val(data.user.userid);
+						text = "用户上线，["+data.user.userid+" , "+data.user.nickname+"]";
+					}
+					if(data.code == 210) {
+						text = "数据全部加载完成，["+data.user.userid+" , "+data.user.nickname+"]";
+					}
+					if(data.code == 300) {
+						text = "面板展开 , 宽度："+data.width;	
+					}
+					if(data.code == 301) {
+						text = "面板收缩，宽度："+data.width;	
+					}
+					if(data.code == 400) {
+						text = "用户下线，["+data.user.userid+" , "+data.user.nickname+"]";
+					}
+					doPrepend('[监听]当前数据状态码('+data.code+')：'+text);
+				});
+			};
+			
+			var doPrepend = function(text){
+				var time = new Date();
+				var timeStr = time.getFullYear() + "/"+(time.getMonth()+1)+"/"+time.getDate()+" "+time.getHours()+":"+time.getMinutes()+":"+time.getSeconds();
+				var li = '<li>['+timeStr+']'+text+'</li>';
+				msg.prepend(li);
+			};
+		</script>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>  
+<head>  
+    <meta charset=gb2312>  
+    <style>
+    	#container {position:absolute;left:100px;top:100px;width:600px;border:1px solid green;padding:100px;}
+    	#div {position:relative;width:300px;left:25%;top:25%;border:1px solid red;}
+    </style>  
+</head>  
+<body>  
+    <textarea id="textarea" >HELLO</textarea>
+    <button id="post" onclick="doPost();">[POST]</button>
+ <script>
+ 	var text = document.getElementById("textarea");
+ 	var doPost = function() {
+ 		var post = document.getElementById("post");
+ 		text.focus();
+ 		if(document.selection) {
+ 			var sel = document.selection.createRange();  
+            sel.text = "[POST]";
+            sel.select();
+ 		} 
+ 		else {
+			var startPos = text.selectionStart;
+			var endPos = text.selectionEnd;
+			var top = text.scrollTop;
+			text.value = text.value.substring(0, startPos) + "[POST]" + text.value.substring(endPos, text.value.length);
+			console.log(top);
+			if (top > 0) {
+				console.log(top);
+				text.scrollTop = top;
+			}
+			text.selectionStart = text.selectionEnd = startPos+("[POST]".length);
+ 		}
+ 	};
+</script> 
+</body>  
+</html>  
